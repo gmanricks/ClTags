@@ -54,7 +54,7 @@ You can then run something like:
 
 ```
 script_name -r
-'''
+```
 
 and get back an object like:
 
