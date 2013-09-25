@@ -53,7 +53,7 @@
         };
         return expect(results).to.deep.equal(expected);
       });
-      return it("should replace short formed tags", function() {
+      it("should replace short formed tags", function() {
         var args, expected, replacements, results;
 
         args = ["script", "-fgh=world"];
@@ -70,6 +70,13 @@
           hello: "world"
         };
         return expect(results).to.deep.equal(expected);
+      });
+      return it("should convert numeric tag values to ints", function() {
+        var args, results;
+
+        args = ["script", "--port=4040"];
+        results = cltags.parse(args);
+        return expect(results).to.have.a.property("port", 4040);
       });
     });
   });

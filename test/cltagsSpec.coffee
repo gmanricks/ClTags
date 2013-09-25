@@ -46,3 +46,8 @@ describe "ClTags", ->
             }
             expect(results).to.deep.equal(expected);
 
+        it "should convert numeric tag values to ints", ->
+            args = ["script", "--port=4040"]
+            results = cltags.parse args
+            expect(results).to.have.a.property("port", 4040);
+

@@ -58,4 +58,9 @@ cltags.parse = (args, defaults, replacements) ->
     # Merge plaintext tags for query
     options.query = options.query.join(" ")
 
+    # Convert numeric tags into ints
+    for key, val of options
+        if /^[0-9]+$/.test val
+            options[key] = parseInt val, 10
+
     return options

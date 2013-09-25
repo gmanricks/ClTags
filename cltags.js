@@ -68,6 +68,12 @@
       }
     }
     options.query = options.query.join(" ");
+    for (key in options) {
+      val = options[key];
+      if (/^[0-9]+$/.test(val)) {
+        options[key] = parseInt(val, 10);
+      }
+    }
     return options;
   };
 
