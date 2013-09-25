@@ -1,7 +1,7 @@
 {
     "name": "cltags",
     "description": "Lightweight library for parsing process.argv",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "author": "Gabriel Manricks <gmanricks@gmail.com>",
     "devDependencies": {
         "mocha": "*",
